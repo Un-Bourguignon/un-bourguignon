@@ -4202,6 +4202,11 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
+react-teleporter@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-teleporter/-/react-teleporter-2.1.1.tgz#55db07f4e917a209cae10647a5b1ce0bbede3c38"
+  integrity sha512-jfbKNYecyXFVG6kr7m4OS5c3cmvEf6gGpE0xvsRtfLsX5ET/fsx5Lsf9KbmqtmzAJopRcrgmYeHk0fmoW3VdgQ==
+
 react-transition-group@^4.4.0:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.1.tgz#63868f9325a38ea5ee9535d828327f85773345c9"
