@@ -1,36 +1,28 @@
-import Head from "next/head";
 import Link from "next/link";
+import HeaderTeleporter from "../components/AppLayout/HeaderTeleporter";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Un Bourguignon</title>
-      </Head>
+      <HeaderTeleporter.Source>
+        <h1>Un Bourguignon</h1>
+      </HeaderTeleporter.Source>
 
-      <main>
-        <h1>
-          <a>Un Bourguignon</a>
-        </h1>
+      <p>Service de développement web && éditeur logiciel</p>
 
-        <p>Service de développement web && éditeur logiciel</p>
-
-        <div>
-          <ul>
-            <li>
-              <Link href="/stephane.maire">Freelance</Link>
-            </li>
-            <li>
-              <Link href="/projects">Projets</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
-      </main>
-
-      <footer>©2020 Un Bourguignon</footer>
+      <div>
+        <ul>
+          <li>
+            <Link href="/stephane.maire">Freelance</Link>
+          </li>
+          <li>
+            <Link href="/projects">Projets</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,12 @@
+import HeaderTeleporter from "../components/AppLayout/HeaderTeleporter";
+
 export default function Freelance() {
   return (
     <div>
+      <HeaderTeleporter.Source>
+        <h1>Un Bourguignon: Freelance</h1>
+      </HeaderTeleporter.Source>
+
       <h1>Stéphane Maire</h1>
       <h2>Freelance Développeur Front End</h2>
       <p>React, NextJS, Material UI, REST API, PWA</p>
