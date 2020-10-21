@@ -19,9 +19,8 @@ function Freelance() {
         et Next.js en particulier) constitue pour moi les meilleurs technologies
         du moment et permettent d'avoir un cycle de développement maitrisé
         (conception - réalisation - maintenance) pour aller au plus vite de
-        l'idée au produit. Au cours de mes développement, je prête attention à
-        la fois à la performances ainsi qu'a la maintenance et la scalabilité
-        d'un produit.
+        l'idée au produit. Au cours de mes développement, je prête attention aux
+        performances ainsi qu'a la maintenance et la scalabilité d'un produit.
       </p>
       <p>
         Je travail à distance depuis Moroges et j'ai accès rapidement à 2 gares
