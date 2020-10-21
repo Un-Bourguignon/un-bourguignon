@@ -1,12 +1,12 @@
+import Link from "next/link";
 import HeaderTeleporter from "../components/AppLayout/HeaderTeleporter";
 
-export default function Freelance() {
+function Freelance() {
   return (
     <div>
       <HeaderTeleporter.Source>
-        <h1>Un Bourguignon: Freelance</h1>
+        <Link href="/">Home</Link>
       </HeaderTeleporter.Source>
-
       <h1>Stéphane Maire</h1>
       <h2>Freelance Développeur Front End</h2>
       <p>React, NextJS, Material UI, REST API, PWA</p>
@@ -32,3 +32,5 @@ export default function Freelance() {
     </div>
   );
 }
+
+export default Freelance;
