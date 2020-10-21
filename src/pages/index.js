@@ -1,7 +1,7 @@
 import Link from "next/link";
 import HeaderTeleporter from "../components/AppLayout/HeaderTeleporter";
 
-export default function Home() {
+function Home() {
   return (
     <div>
       <HeaderTeleporter.Source>
@@ -15,14 +15,10 @@ export default function Home() {
           <li>
             <Link href="/stephane.maire">Freelance</Link>
           </li>
-          <li>
-            <Link href="/projects">Projets</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
         </ul>
       </div>
     </div>
   );
 }
+
+export default Home;
