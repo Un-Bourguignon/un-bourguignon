@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import HeaderTeleporter from "../components/AppLayout/HeaderTeleporter";
+import ContactCard from "../components/ContactCard";
+import ContactCardActions from "../components/ContactCardActions";
 
 const useStyles = makeStyles((theme) => ({
   Container: {
@@ -26,7 +28,7 @@ function Freelance() {
         Stéphane Maire
       </Typography>
       <Typography variant="h4" component="h2">
-        Freelance Développeur Front End
+        Freelance Développeur Front-End
       </Typography>
       <Typography variant="subtitle1">React, NextJS, Material UI</Typography>
 
@@ -55,8 +57,15 @@ function Freelance() {
         </Typography>
       </div>
 
-      <div>Lien vers LinkedIn et GitHub</div>
-      <div>Coordonnées: Mail & Téléphone</div>
+      <ContactCard
+        email="stephanemaire71@gmail.com"
+        image="https://github.com/stephane71.png"
+        imageTitle="GitHub photo"
+        location="Moroges, France"
+        phone="+336 74 56 22 96"
+        title="Stéphane Maire . Développeur Front-End"
+        actions={<ContactCardActions />}
+      />
     </Container>
   );
 }
