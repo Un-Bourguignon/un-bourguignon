@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { Provider } from "react-redux";
 import AppLayout from "../components/AppLayout";
+import AppFooter from "../components/AppFooter";
 import makeStore from "../makeStore";
 import theme from "../theme";
 import "../styles.css";
@@ -15,12 +16,13 @@ const store = makeStore(INITIAL_STATE);
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
+    const isFreelancePage = this.props.router.pathname === "/stephane.maire";
 
     return (
       <Provider store={store}>
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
-          <AppLayout footer={<p>©2020 Un Bourguignon</p>}>
+          <AppLayout footer={!isFreelancePage ? <AppFooter /> : null}>
             <Component {...pageProps} />
           </AppLayout>
         </MuiThemeProvider>
