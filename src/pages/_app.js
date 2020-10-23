@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import App from "next/app";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { MuiThemeProvider } from "@material-ui/core/styles";
@@ -27,5 +28,10 @@ class MyApp extends App {
     );
   }
 }
+
+MyApp.propTypes = {
+  Component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  pageProps: PropTypes.object,
+};
 
 export default MyApp;
