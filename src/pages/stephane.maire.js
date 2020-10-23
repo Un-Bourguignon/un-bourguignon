@@ -7,6 +7,7 @@ import ContactCardActions from "../components/ContactCardActions";
 const useStyles = makeStyles((theme) => ({
   Container: {
     height: "100%",
+    paddingBottom: theme.spacing(4),
   },
   header: {
     padding: `${theme.spacing(4)}px 0`,
