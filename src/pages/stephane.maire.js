@@ -58,7 +58,7 @@ function Freelance() {
       </div>
 
       <ContactCard
-        email="stephanemaire71@gmail.com"
+        email="stephane@un-bourguignon.com"
         image="https://github.com/stephane71.png"
         imageTitle="GitHub photo"
         location="Moroges, France"
