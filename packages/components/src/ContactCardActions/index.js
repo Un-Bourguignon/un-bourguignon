@@ -8,7 +8,7 @@ import {
   CONTACT_FILE_VCF,
   GITHUB_ACCOUNT_URL,
   LINKEDIN_PROFIL_URL,
-} from "../../../src/constants";
+} from "../constants";
 import styles from "./styles";
 
 const useStyles = makeStyles(styles);
