@@ -3,6 +3,20 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import ContactCard from "../components/ContactCard";
 import ContactCardActions from "../components/ContactCardActions";
+import { ContactCard as ContactCardUB } from "@un-bourguignon/components";
+
+const MOCK_USER = {
+  image: "https://github.com/stephane71.png",
+  imageTitle: "GitHub profil photo",
+  title: "Stéphane Maire",
+  job: "Développer Front-End",
+  location: {
+    label: "Moroges, France",
+    mapLink: "HOME_ADDRESS_GOOGLE_MAPS",
+  },
+  email: "stephane@un-bourguignon.com",
+  phone: "+33 6 62 46 16 43",
+};
 
 const useStyles = makeStyles((theme) => ({
   Container: {
@@ -60,6 +74,7 @@ function Freelance() {
       </main>
 
       <aside>
+        <ContactCardUB {...MOCK_USER} />
         <ContactCard
           email="stephane@un-bourguignon.com"
           image="https://github.com/stephane71.png"

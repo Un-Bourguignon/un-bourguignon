@@ -1,24 +1,13 @@
 {
-  "name": "un-bourguignon",
-  "version": "0.1.0",
+  "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "next": "9.5.5",
-    "prop-types": "^15.7.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-redux": "^7.2.1",
-    "react-teleporter": "^2.1.1",
-    "redux": "^4.0.5"
+    "dev": "lerna run dev --parallel"
   },
   "devDependencies": {
-    "prettier": "^2.1.2"
+    "lerna": "^3.22.1"
   }
 }
