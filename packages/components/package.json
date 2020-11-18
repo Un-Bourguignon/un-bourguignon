@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "description": "React components developed in Un Bourguignon projects",
   "author": "stephane71 <stephane@un-bourguignon.com>",
-  "homepage": "https://github.com/stephane71/un-bourguignon#readme",
+  "homepage": "https://github.com/Un-Bourguignon/un-bourguignon.git#readme",
   "license": "ISC",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stephane71/un-bourguignon.git"
+    "url": "git+https://github.com/Un-Bourguignon/un-bourguignon.git.git"
   },
   "scripts": {
     "dev": "rollup -c -w",
