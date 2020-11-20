@@ -34,7 +34,8 @@
     "react-dom": "16.14.0"
   },
   "dependencies": {
-    "@react-hook/resize-observer": "^1.1.0"
+    "@react-hook/resize-observer": "^1.1.0",
+    "react-teleporter": "^2.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
