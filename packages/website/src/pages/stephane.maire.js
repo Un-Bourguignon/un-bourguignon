@@ -1,9 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import ContactCard from "../components/ContactCard";
-import ContactCardActions from "../components/ContactCardActions";
-import { ContactCard as ContactCardUB } from "@un-bourguignon/components";
+import { ContactCard } from "@un-bourguignon/components";
 
 const MOCK_USER = {
   image: "https://github.com/stephane71.png",
@@ -74,16 +72,7 @@ function Freelance() {
       </main>
 
       <aside>
-        <ContactCardUB {...MOCK_USER} />
-        <ContactCard
-          email="stephane@un-bourguignon.com"
-          image="https://github.com/stephane71.png"
-          imageTitle="GitHub photo"
-          location="Moroges, France"
-          phone="+336 74 56 22 96"
-          title="Stéphane Maire . Développeur Front-End"
-          actions={<ContactCardActions />}
-        />
+        <ContactCard {...MOCK_USER} />
       </aside>
     </Container>
   );

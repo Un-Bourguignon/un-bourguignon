@@ -1,12 +1,12 @@
 import Link from "next/link";
-import HeaderTeleporter from "../components/AppLayout/HeaderTeleporter";
+import { HeaderSource } from "@un-bourguignon/components";
 
 function Home() {
   return (
     <div>
-      <HeaderTeleporter.Source>
+      <HeaderSource>
         <h1>Un Bourguignon</h1>
-      </HeaderTeleporter.Source>
+      </HeaderSource>
 
       <p>Service de développement web && éditeur logiciel</p>
 

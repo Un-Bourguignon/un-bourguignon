@@ -5,7 +5,7 @@ import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { Provider } from "react-redux";
-import AppLayout from "../components/AppLayout";
+import { AppLayout } from "@un-bourguignon/components";
 import AppFooter from "../components/AppFooter";
 import makeStore from "../makeStore";
 import theme from "../theme";
