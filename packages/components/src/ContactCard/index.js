@@ -62,7 +62,7 @@ function ContactCard({
               </Typography>
             </header>
 
-            <address>
+            <address className={classes.address}>
               <AddressItemButton
                 link={location.mapLink}
                 label={location.label}

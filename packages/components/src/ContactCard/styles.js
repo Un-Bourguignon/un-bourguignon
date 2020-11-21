@@ -27,6 +27,9 @@ const styles = (theme) => ({
   contactCardTitle: {
     fontWeight: theme.typography.fontWeightBold,
   },
+  address: {
+    fontStyle: "inherit",
+  },
 });
 
 export default styles;
