@@ -1,16 +1,17 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import { ContactCard } from "@un-bourguignon/components";
+import { ContactCard, ContactCardActions } from "@un-bourguignon/components";
+import { HOME_ADDRESS_GOOGLE_MAPS, GITHUB_PROFIL_PHOTO } from "../constants";
 
-const MOCK_USER = {
-  image: "https://github.com/stephane71.png",
+const USER = {
+  image: GITHUB_PROFIL_PHOTO,
   imageTitle: "GitHub profil photo",
   title: "Stéphane Maire",
   job: "Développer Front-End",
   location: {
     label: "Moroges, France",
-    mapLink: "HOME_ADDRESS_GOOGLE_MAPS",
+    mapLink: HOME_ADDRESS_GOOGLE_MAPS,
   },
   email: "stephane@un-bourguignon.com",
   phone: "+33 6 62 46 16 43",
@@ -72,7 +73,7 @@ function Freelance() {
       </main>
 
       <aside>
-        <ContactCard {...MOCK_USER} />
+        <ContactCard {...USER} actions={<ContactCardActions />} />
       </aside>
     </Container>
   );
