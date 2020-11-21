@@ -27,4 +27,4 @@ AppLayout.propTypes = {
 };
 
 export default AppLayout;
-export { HeaderTarget } from "./HeaderTeleporter";
+export * from "./HeaderTeleporter";
