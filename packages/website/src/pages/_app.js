@@ -4,15 +4,10 @@ import App from "next/app";
 import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import { Provider } from "react-redux";
 import { AppLayout } from "@un-bourguignon/components";
 import AppFooter from "../components/AppFooter";
-import makeStore from "../makeStore";
 import theme from "../theme";
 import "../styles.css";
-
-const INITIAL_STATE = {};
-const store = makeStore(INITIAL_STATE);
 
 class MyApp extends App {
   render() {
@@ -25,14 +20,13 @@ class MyApp extends App {
           <title>Un Bourguignon</title>
           <meta name="theme-color" content={theme.palette.primary.main} />
         </Head>
-        <Provider store={store}>
-          <MuiThemeProvider theme={theme}>
-            <CssBaseline />
-            <AppLayout footer={!isFreelancePage ? <AppFooter /> : null}>
-              <Component {...pageProps} />
-            </AppLayout>
-          </MuiThemeProvider>
-        </Provider>
+
+        <MuiThemeProvider theme={theme}>
+          <CssBaseline />
+          <AppLayout footer={!isFreelancePage ? <AppFooter /> : null}>
+            <Component {...pageProps} />
+          </AppLayout>
+        </MuiThemeProvider>
       </>
     );
   }
