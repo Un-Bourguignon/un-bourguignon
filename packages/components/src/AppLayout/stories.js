@@ -31,6 +31,12 @@ const SmallHeightContent = (
   </div>
 );
 
+const BigHeightContent = (
+  <div style={{ backgroundColor: "#2196f3", height: 1000, color: "white" }}>
+    Content with height 100px
+  </div>
+);
+
 const Footer = (
   <div style={{ height: 200, backgroundColor: "#f50057", color: "white" }}>
     Footer
@@ -52,3 +58,10 @@ SmallHeight.args = {
   footer: Footer,
 };
 SmallHeight.storyName = "Small height content";
+
+export const BigHeight = Template.bind({});
+BigHeight.args = {
+  children: BigHeightContent,
+  footer: Footer,
+};
+BigHeight.storyName = "Big height content";
