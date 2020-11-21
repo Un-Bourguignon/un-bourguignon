@@ -3,7 +3,7 @@ import grey from "@material-ui/core/colors/grey";
 
 const styles = (theme) => ({
   ContactCard: {
-    display: "inline-block",
+    display: ({ fullWidth }) => (fullWidth ? "block" : "inline-block"),
   },
   container: {
     display: "flex",

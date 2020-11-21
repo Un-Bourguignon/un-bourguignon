@@ -23,8 +23,9 @@ function ContactCard({
   phone = "",
   actions = null,
   vertical = false,
+  fullWidth = false,
 }) {
-  const classes = useStyles({ vertical });
+  const classes = useStyles({ vertical, fullWidth });
   const ref = useRef(null);
 
   return (
@@ -101,6 +102,7 @@ ContactCard.propTypes = {
   phone: PropTypes.string,
   actions: PropTypes.element,
   vertical: PropTypes.bool,
+  fullWidth: PropTypes.bool,
 };
 
 export default ContactCard;
