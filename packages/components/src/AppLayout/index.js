@@ -3,9 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { HeaderTarget } from "./HeaderTeleporter";
 import styles from "./styles";
 
-export * from "./HeaderTeleporter";
-export { default as HeaderTeleporter } from "./HeaderTeleporter";
-
 const useStyles = makeStyles(styles);
 
 function AppLayout({ children, footer }) {
@@ -30,3 +27,4 @@ AppLayout.propTypes = {
 };
 
 export default AppLayout;
+export { HeaderTarget } from "./HeaderTeleporter";
