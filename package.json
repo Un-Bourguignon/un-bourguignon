@@ -8,6 +8,7 @@
     "dev": "lerna run dev --parallel"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "lerna": "^3.22.1"
   }
 }
