@@ -1,4 +1,5 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { ContactCard, ContactCardActions } from "@un-bourguignon/components";
@@ -32,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
 
 function Freelance() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <Container maxWidth="sm" className={classes.Container} component="section">
@@ -73,7 +76,12 @@ function Freelance() {
       </main>
 
       <aside>
-        <ContactCard {...USER} actions={<ContactCardActions />} elevation={5} />
+        <ContactCard
+          {...USER}
+          actions={<ContactCardActions />}
+          vertical={matches}
+          fullWidth
+        />
       </aside>
     </Container>
   );
