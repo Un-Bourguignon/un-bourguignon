@@ -73,7 +73,7 @@ function Freelance() {
       </main>
 
       <aside>
-        <ContactCard {...USER} actions={<ContactCardActions />} />
+        <ContactCard {...USER} actions={<ContactCardActions />} elevation={5} />
       </aside>
     </Container>
   );
