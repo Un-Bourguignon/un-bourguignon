@@ -11,7 +11,7 @@ export default {
 const Template = () => (
   <ContactDetails
     email={MOCK_USER.email}
-    location={MOCK_USER.location.label}
+    location={MOCK_USER.location}
     phone={MOCK_USER.phone}
   />
 );

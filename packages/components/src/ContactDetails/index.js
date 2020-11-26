@@ -11,11 +11,11 @@ import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-const ContactDetailsItem = ({ icon: Icon, text }) => {
+const ContactDetailsItem = ({ icon: Icon, text, href }) => {
   const classes = useStyles();
 
   return (
-    <ListItem button>
+    <ListItem button component="a" href={href} target="_blank">
       <ListItemIcon className={classes.contactDetailsItemIcon}>
         <Icon />
       </ListItemIcon>
@@ -27,16 +27,31 @@ const ContactDetailsItem = ({ icon: Icon, text }) => {
 function ContactDetails({ email, phone, location }) {
   return (
     <List aria-label="contact details" dense>
-      <ContactDetailsItem icon={MailOutlineIcon} text={email} />
-      <ContactDetailsItem icon={PhoneOutlinedIcon} text={phone} />
-      <ContactDetailsItem icon={LocationOnOutlinedIcon} text={location} />
+      <ContactDetailsItem
+        icon={MailOutlineIcon}
+        text={email}
+        href={`mailto:${email}`}
+      />
+      <ContactDetailsItem
+        icon={PhoneOutlinedIcon}
+        text={phone}
+        href={`tel:${phone}`}
+      />
+      <ContactDetailsItem
+        icon={LocationOnOutlinedIcon}
+        text={location.label}
+        href={location.mapLink}
+      />
     </List>
   );
 }
 
 ContactDetails.propTypes = {
   email: PropTypes.string,
-  location: PropTypes.string,
+  location: PropTypes.shape({
+    label: PropTypes.string,
+    mapLink: PropTypes.string,
+  }),
   phone: PropTypes.string,
 };
 
