@@ -25,7 +25,12 @@ const Template = (props) => <AvatarEnhance img={MOCK_USER.image} {...props} />;
 export const Default = Template.bind({});
 Default.args = {
   externalLinks,
+  firstname: MOCK_USER.firstname,
+  lastname: MOCK_USER.lastname,
 };
 
 export const WithoutExternalLinks = Template.bind({});
-WithoutExternalLinks.args = {};
+WithoutExternalLinks.args = {
+  firstname: MOCK_USER.firstname,
+  lastname: MOCK_USER.lastname,
+};
