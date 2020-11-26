@@ -7,7 +7,7 @@ import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-function ContactCardActions({ externalLinks, vcf }) {
+function ContactCardActions({ externalLinks = [], vcf }) {
   const classes = useStyles();
 
   return (
