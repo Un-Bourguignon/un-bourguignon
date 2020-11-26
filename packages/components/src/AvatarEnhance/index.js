@@ -7,7 +7,7 @@ import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-function AvatarEnhance({ img, externalLinks = [] }) {
+function AvatarEnhance({ firstname, lastname, img, externalLinks = [] }) {
   const classes = useStyles();
 
   return (
@@ -15,7 +15,7 @@ function AvatarEnhance({ img, externalLinks = [] }) {
       <Avatar alt="Stéphane Maire" src={img} className={classes.avatar} />
       <div className={classes.text}>
         <Typography variant="h6" component="p">
-          Stéphane <span style={{ opacity: 0.6 }}>Maire</span>
+          {firstname} <span style={{ opacity: 0.6 }}>{lastname}</span>
         </Typography>
 
         <Typography
@@ -47,6 +47,8 @@ function AvatarEnhance({ img, externalLinks = [] }) {
 
 AvatarEnhance.propTypes = {
   img: PropTypes.string.isRequired,
+  firstname: PropTypes.string.isRequired,
+  lastname: PropTypes.string.isRequired,
   externalLinks: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.elementType,
