@@ -7,7 +7,7 @@ import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-function AvatarEnhance({ img, externalLinks }) {
+function AvatarEnhance({ img, externalLinks = [] }) {
   const classes = useStyles();
 
   return (
@@ -46,7 +46,7 @@ function AvatarEnhance({ img, externalLinks }) {
 }
 
 AvatarEnhance.propTypes = {
-  img: PropTypes.string,
+  img: PropTypes.string.isRequired,
   externalLinks: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.elementType,
