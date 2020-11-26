@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { ContactDetails, AvatarEnhance } from "@un-bourguignon/components";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import ButtonNetworkProfils from "../components/ButtonsNetworkProfils";
@@ -12,19 +11,21 @@ const useStyles = makeStyles((theme) => ({
   FreelancePage: {
     position: "relative",
     paddingBottom: theme.spacing(5),
+    height: "100%",
   },
   header: {
-    padding: `${theme.spacing(4)}px 0`,
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(2),
   },
   main: {
-    padding: `${theme.spacing(2)}px 0`,
+    paddingBottom: theme.spacing(4),
   },
   presentation: {
+    fontWeight: theme.typography.fontWeightRegular,
     marginBottom: theme.spacing(5),
   },
-  presentationText: {
-    fontWeight: theme.typography.fontWeightRegular,
-    marginBottom: theme.spacing(1),
+  chapter: {
+    marginBottom: theme.spacing(5),
   },
   buttonDLContact: {
     marginTop: theme.spacing(1),
@@ -51,36 +52,41 @@ const FreelancePage = () => {
       </header>
 
       <main className={classes.main}>
-        <div className={classes.presentation}>
+        <div className={classes.chapter}>
           <Typography
             variant="h6"
             component="p"
             color="textSecondary"
-            className={classes.presentationText}
+            className={classes.presentation}
           >
-            Bonjour, je suis développeur Front-End et travaille à distance
-            depuis la Saône-et-Loire. J'ai accès rapidement à Paris, Lyon et
-            Marseille pour nous rencontrer.
+            <span style={{ color: "rgba(0, 0, 0, 0.87)" }}>Bonjour,</span> je
+            suis développeur Front-End et travaille à distance depuis la
+            Saône-et-Loire. J'ai accès rapidement à Paris, Lyon et Marseille
+            pour nous rencontrer.
           </Typography>
+        </div>
+
+        <div className={classes.chapter}>
+          <Typography variant="h6">Réalisations et Expérience</Typography>
           <ButtonNetworkProfils />
         </div>
 
-        <Paper variant="outlined">
+        <div className={classes.chapter}>
+          <Typography variant="h6">Mon contact</Typography>
           <ContactDetails
             email={PERSONAL_DETAILS.email}
             location={PERSONAL_DETAILS.location}
             phone={PERSONAL_DETAILS.phone}
           />
-        </Paper>
-
-        <Button
-          startIcon={<GetAppIcon />}
-          size="large"
-          variant="outlined"
-          className={classes.buttonDLContact}
-        >
-          Télécharger mon contact
-        </Button>
+          <Button
+            startIcon={<GetAppIcon />}
+            size="large"
+            variant="outlined"
+            className={classes.buttonDLContact}
+          >
+            Télécharger mon contact
+          </Button>
+        </div>
       </main>
     </Container>
   );
