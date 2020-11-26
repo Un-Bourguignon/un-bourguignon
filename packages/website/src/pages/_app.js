@@ -17,8 +17,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>Un Bourguignon</title>
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <title>Un Bourguignon</title>s
         </Head>
 
         <MuiThemeProvider theme={theme}>
