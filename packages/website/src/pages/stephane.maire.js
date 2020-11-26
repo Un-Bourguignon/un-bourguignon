@@ -42,7 +42,12 @@ const FreelancePage = () => {
       className={classes.FreelancePage}
     >
       <header className={classes.header}>
-        <AvatarEnhance img={PERSONAL_DETAILS.image} externalLinks={[]} />
+        <AvatarEnhance
+          img={PERSONAL_DETAILS.image}
+          externalLinks={[]}
+          firstname={PERSONAL_DETAILS.firstname}
+          lastname={PERSONAL_DETAILS.lastname}
+        />
       </header>
 
       <main className={classes.main}>
