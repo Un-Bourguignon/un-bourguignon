@@ -34,6 +34,7 @@ function ButtonNetworkProfils() {
         style={buttonStyle}
         size="large"
         href={PERSONAL_DETAILS.LinkedIn}
+        target="_blank"
       >
         Linkedin
       </Button>
