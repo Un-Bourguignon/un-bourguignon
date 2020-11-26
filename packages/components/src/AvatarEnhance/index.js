@@ -15,7 +15,7 @@ function AvatarEnhance({ img, externalLinks = [] }) {
       <Avatar alt="Stéphane Maire" src={img} className={classes.avatar} />
       <div className={classes.text}>
         <Typography variant="h6" component="p">
-          Stéphane Maire
+          Stéphane <span style={{ opacity: 0.6 }}>Maire</span>
         </Typography>
 
         <Typography
