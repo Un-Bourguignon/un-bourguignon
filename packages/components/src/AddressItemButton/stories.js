@@ -1,11 +1,12 @@
 import React from "react";
 import LocationOnIcon from "@material-ui/icons/LocationOnOutlined";
-import { HOME_ADDRESS_GOOGLE_MAPS } from "../constants";
+import { MOCK_USER } from "../constants";
+
 import AddressItemButton from "./index";
 
 const MOCK_PROPS = {
   label: "Moroges, France",
-  link: HOME_ADDRESS_GOOGLE_MAPS,
+  link: MOCK_USER.location.mapLink,
   icon: LocationOnIcon,
 };
 
