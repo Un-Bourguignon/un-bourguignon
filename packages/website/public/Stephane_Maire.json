@@ -1,0 +1,15 @@
+{
+  "LinkedIn": "https://www.linkedin.com/in/st%C3%A9phane-maire-124b7a32",
+  "GitHub": "https://github.com/stephane71",
+  "image": "https://github.com/stephane71.png",
+  "imageTitle": "GitHub profil photo",
+  "title": "Stéphane Maire",
+  "job": "Développeur Front-End",
+  "location": {
+    "label": "Moroges, France",
+    "mapLink": "https://goo.gl/maps/K94VPqUTTuLUd38J8"
+  },
+  "email": "stephane@un-bourguignon.com",
+  "phone": "+33 6 62 46 16 43",
+  "vcf": "https://assets.la-foulee.com/Stephane_Maire.vcf"
+}
