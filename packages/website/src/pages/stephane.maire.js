@@ -58,9 +58,9 @@ const FreelancePage = () => {
             color="textSecondary"
             className={classes.presentationText}
           >
-            Je suis développeur Front-End et travaille à distance depuis la
-            Saône-et-Loire. J'ai accès rapidement à Paris, Lyon et Marseille
-            pour nous rencontrer.
+            Bonjour, je suis développeur Front-End et travaille à distance
+            depuis la Saône-et-Loire. J'ai accès rapidement à Paris, Lyon et
+            Marseille pour nous rencontrer.
           </Typography>
           <ButtonNetworkProfils />
         </div>
