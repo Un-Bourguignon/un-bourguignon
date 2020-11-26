@@ -2,20 +2,7 @@ import React, { useState } from "react";
 
 import ContactCard from "./index";
 import ContactCardActions from "../ContactCardActions";
-import { HOME_ADDRESS_GOOGLE_MAPS } from "../constants";
-
-const MOCK_USER = {
-  image: "https://github.com/stephane71.png",
-  imageTitle: "GitHub profil photo",
-  title: "Stéphane Maire",
-  job: "Développer Front-End",
-  location: {
-    label: "Moroges, France",
-    mapLink: HOME_ADDRESS_GOOGLE_MAPS,
-  },
-  email: "stephane@un-bourguignon.com",
-  phone: "+33 6 62 46 16 43",
-};
+import { MOCK_USER } from "../constants";
 
 export default {
   title: "components/ContactCard",
