@@ -4,6 +4,8 @@
   "image": "https://github.com/stephane71.png",
   "imageTitle": "GitHub profil photo",
   "title": "Stéphane Maire",
+  "firstname": "Stéphane",
+  "lastname": "Maire",
   "job": "Développeur Front-End",
   "location": {
     "label": "Moroges, France",
