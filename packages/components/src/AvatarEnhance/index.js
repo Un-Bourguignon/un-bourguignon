@@ -12,7 +12,11 @@ function AvatarEnhance({ firstname, lastname, img, externalLinks = [] }) {
 
   return (
     <div className={classes.AvatarEnhance}>
-      <Avatar alt="Stéphane Maire" src={img} className={classes.avatar} />
+      <Avatar
+        alt={`${firstname} ${lastname}`}
+        src={img}
+        className={classes.avatar}
+      />
       <div className={classes.text}>
         <Typography variant="h6" component="p">
           {firstname} <span style={{ opacity: 0.6 }}>{lastname}</span>
