@@ -109,6 +109,7 @@ const FreelancePage = () => {
             size="large"
             variant="outlined"
             className={classes.buttonDLContact}
+            href={PERSONAL_DETAILS.vcf}
           >
             Télécharger mon contact
           </Button>
