@@ -14,19 +14,15 @@ const useStyles = makeStyles((theme) => ({
   FreelancePage: {
     position: "relative",
     paddingBottom: theme.spacing(5),
-    height: "100%",
   },
   header: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
   },
-  main: {
-    paddingBottom: theme.spacing(4),
-  },
-  presentation: {
+  fontWeightRegular: {
     fontWeight: theme.typography.fontWeightRegular,
   },
-  chapter: {
+  section: {
     marginBottom: theme.spacing(2),
   },
   buttonDLContact: {
@@ -44,7 +40,7 @@ const FreelancePage = () => {
   return (
     <Container
       maxWidth="sm"
-      component="section"
+      component="article"
       className={classes.FreelancePage}
     >
       <header className={classes.header}>
@@ -56,65 +52,63 @@ const FreelancePage = () => {
         />
       </header>
 
-      <main className={classes.main}>
-        <div className={classes.chapter}>
-          <Typography
-            variant="h6"
-            component="p"
-            className={classes.presentation}
-          >
-            <b>Bonjour,</b>
-            <br />
-            Je suis développeur Front-End et travaille à distance depuis la
-            Saône-et-Loire. Je suis spécialisé dans les environnements React et
-            les technologies qui gravitent autour.
-            <br />
-          </Typography>
-        </div>
+      <section id="introduction" className={classes.section}>
+        <Typography
+          variant="h6"
+          component="p"
+          className={classes.fontWeightRegular}
+        >
+          <b>Bonjour,</b>
+          <br />
+          Je suis développeur Front-End et travaille à distance depuis la
+          Saône-et-Loire. Je suis spécialisé dans les environnements React et
+          les technologies qui gravitent autour.
+          <br />
+        </Typography>
+      </section>
 
-        <div className={classes.chapter}>
-          <LogoWebTechno />
-        </div>
+      <section id="technologies" className={classes.section}>
+        <LogoWebTechno />
+      </section>
 
-        <Divider light className={classes.divider} />
+      <Divider light className={classes.divider} />
 
-        <div className={classes.chapter}>
-          <Typography
-            variant="h6"
-            component="p"
-            className={classes.presentation}
-          >
-            Sur les réseaux
-          </Typography>
-          <ButtonNetworkProfils />
-        </div>
+      <section id="social-networks" className={classes.section}>
+        <Typography
+          variant="h6"
+          component="h3"
+          className={classes.fontWeightRegular}
+        >
+          Sur les réseaux
+        </Typography>
+        <ButtonNetworkProfils />
+      </section>
 
-        <div className={classes.chapter}>
-          <Typography
-            variant="h6"
-            component="p"
-            className={classes.presentation}
-          >
-            Contactez moi
-          </Typography>
-          <Paper variant="outlined">
-            <ContactDetails
-              email={PERSONAL_DETAILS.email}
-              location={PERSONAL_DETAILS.location}
-              phone={PERSONAL_DETAILS.phone}
-            />
-          </Paper>
-          <Button
-            startIcon={<GetAppIcon />}
-            size="large"
-            variant="outlined"
-            className={classes.buttonDLContact}
-            href={PERSONAL_DETAILS.vcf}
-          >
-            Télécharger mon contact
-          </Button>
-        </div>
-      </main>
+      <section id="contact-informations" className={classes.section}>
+        <Typography
+          variant="h6"
+          component="h3"
+          className={classes.fontWeightRegular}
+        >
+          Contactez moi
+        </Typography>
+        <Paper variant="outlined">
+          <ContactDetails
+            email={PERSONAL_DETAILS.email}
+            location={PERSONAL_DETAILS.location}
+            phone={PERSONAL_DETAILS.phone}
+          />
+        </Paper>
+        <Button
+          startIcon={<GetAppIcon />}
+          size="large"
+          variant="outlined"
+          className={classes.buttonDLContact}
+          href={PERSONAL_DETAILS.vcf}
+        >
+          Télécharger mon contact
+        </Button>
+      </section>
     </Container>
   );
 };
