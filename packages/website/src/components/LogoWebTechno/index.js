@@ -27,6 +27,7 @@ function LogoWebTechno() {
           key={url}
           src={`${BASE_URL_LOGO}/${url}.svg`}
           alt={title}
+          title={title}
           className={classes.logo}
         />
       ))}
