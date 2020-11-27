@@ -15,10 +15,14 @@ const styles = (theme) => ({
     marginLeft: theme.spacing(2),
   },
   subtitle: {
-    fontWeight: theme.typography.fontWeightBold,
+    fontWeight: theme.typography.fontWeightMedium,
   },
   externalLinkIcon: {
     marginRight: theme.spacing(1),
+  },
+  name: {
+    textTransform: "uppercase",
+    letterSpacing: theme.typography.caption.letterSpacing,
   },
 });
 

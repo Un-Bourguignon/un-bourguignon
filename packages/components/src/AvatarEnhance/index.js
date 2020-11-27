@@ -18,12 +18,12 @@ function AvatarEnhance({ firstname, lastname, img, externalLinks = [] }) {
         className={classes.avatar}
       />
       <div className={classes.text}>
-        <Typography variant="h6" component="p">
+        <Typography variant="h6" component="p" className={classes.name}>
           {firstname} <span style={{ opacity: 0.7 }}>{lastname}</span>
         </Typography>
 
         <Typography
-          variant="subtitle2"
+          variant="subtitle1"
           color="textSecondary"
           component="p"
           className={classes.subtitle}
