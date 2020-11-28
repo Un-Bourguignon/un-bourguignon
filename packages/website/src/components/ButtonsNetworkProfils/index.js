@@ -14,11 +14,6 @@ const useStyles = makeStyles(styles);
 function ButtonNetworkProfils() {
   const classes = useStyles();
 
-  const buttonStyle = {
-    marginRight: theme.spacing(1),
-    color: BUTTONS_COLOR,
-  };
-
   return (
     <div>
       <Button
@@ -27,6 +22,7 @@ function ButtonNetworkProfils() {
         size="large"
         href={PERSONAL_DETAILS.GitHub}
         target="_blank"
+        rel="noreferrer"
       >
         GitHub
       </Button>
@@ -36,6 +32,7 @@ function ButtonNetworkProfils() {
         size="large"
         href={PERSONAL_DETAILS.LinkedIn}
         target="_blank"
+        rel="noreferrer"
       >
         Linkedin
       </Button>
