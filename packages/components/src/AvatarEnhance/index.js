@@ -6,8 +6,15 @@ import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-function AvatarEnhance({ firstname, lastname, img, bottomComponent = null }) {
-  const classes = useStyles();
+function AvatarEnhance({
+  img,
+  firstname,
+  lastname,
+  job = "",
+  bottomComponent = null,
+  small = false,
+}) {
+  const classes = useStyles({ small });
 
   return (
     <div className={classes.AvatarEnhance}>
@@ -17,7 +24,7 @@ function AvatarEnhance({ firstname, lastname, img, bottomComponent = null }) {
         className={classes.avatar}
       />
       <div className={classes.text}>
-        <Typography variant="h6" component="h1" className={classes.name}>
+        <Typography variant={"h6"} component="h1" className={classes.name}>
           {firstname} <span style={{ opacity: 0.7 }}>{lastname}</span>
         </Typography>
 
@@ -27,10 +34,10 @@ function AvatarEnhance({ firstname, lastname, img, bottomComponent = null }) {
           component="h2"
           className={classes.subtitle}
         >
-          Développeur Front-End
+          {job}
         </Typography>
 
-        {bottomComponent}
+        {small ? null : bottomComponent}
       </div>
     </div>
   );
@@ -40,7 +47,9 @@ AvatarEnhance.propTypes = {
   img: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
+  job: PropTypes.string,
   bottomComponent: PropTypes.element,
+  small: PropTypes.bool,
 };
 
 export default AvatarEnhance;

@@ -4,8 +4,8 @@ const styles = (theme) => ({
     alignItems: "stretch",
   },
   avatar: {
-    width: theme.spacing(10),
-    height: theme.spacing(10),
+    width: ({ small }) => theme.spacing(small ? 7 : 10),
+    height: ({ small }) => theme.spacing(small ? 7 : 10),
     border: `1px solid ${theme.palette.divider}`,
   },
   text: {
@@ -16,10 +16,14 @@ const styles = (theme) => ({
   },
   subtitle: {
     fontWeight: theme.typography.fontWeightMedium,
+    fontSize: ({ small }) =>
+        small ? theme.typography.body1.fontSize : theme.typography.subtitle1.fontSize,
   },
   name: {
     textTransform: "uppercase",
     letterSpacing: theme.typography.caption.letterSpacing,
+    fontSize: ({ small }) =>
+      small ? theme.typography.body1.fontSize : theme.typography.h6.fontSize,
   },
 });
 
