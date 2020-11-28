@@ -42,6 +42,7 @@ export const Default = Template.bind({});
 Default.args = {
   firstname: MOCK_USER.firstname,
   lastname: MOCK_USER.lastname,
+  job: MOCK_USER.job,
   bottomComponent: socialNetworkLinks,
 };
 
@@ -49,4 +50,13 @@ export const WithoutExternalLinks = Template.bind({});
 WithoutExternalLinks.args = {
   firstname: MOCK_USER.firstname,
   lastname: MOCK_USER.lastname,
+  job: MOCK_USER.job,
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  firstname: "Freelance",
+  lastname: '',
+  job: MOCK_USER.job,
+  small: true,
 };
