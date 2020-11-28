@@ -57,9 +57,9 @@ const FreelancePage = () => {
       <header className={classes.header}>
         <AvatarEnhance
           img={PERSONAL_DETAILS.image}
-          externalLinks={[]}
           firstname={PERSONAL_DETAILS.firstname}
           lastname={PERSONAL_DETAILS.lastname}
+          job={PERSONAL_DETAILS.job}
           bottomComponent={
             <div>
               <Chip
