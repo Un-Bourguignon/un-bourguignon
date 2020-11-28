@@ -1,9 +1,7 @@
-const BUTTONS_COLOR = "rgba(0, 0, 0, 0.54)";
-
-const styles = () => ({
-  ButtonNetworkProfils: {},
+const styles = (theme) => ({
   button: {
-    color: BUTTONS_COLOR,
+    marginRight: theme.spacing(1),
+    color: theme.palette.text.secondary,
   },
 });
 
