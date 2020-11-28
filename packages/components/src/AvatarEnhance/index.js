@@ -13,6 +13,7 @@ function AvatarEnhance({
   job = "",
   bottomComponent = null,
   small = false,
+  asParagraph = false,
 }) {
   const classes = useStyles({ small });
 
@@ -24,14 +25,18 @@ function AvatarEnhance({
         className={classes.avatar}
       />
       <div className={classes.text}>
-        <Typography variant={"h6"} component="h1" className={classes.name}>
+        <Typography
+          variant="h6"
+          component={asParagraph ? "p" : "h1"}
+          className={classes.name}
+        >
           {firstname} <span style={{ opacity: 0.7 }}>{lastname}</span>
         </Typography>
 
         <Typography
           variant="subtitle1"
           color="textSecondary"
-          component="h2"
+          component={asParagraph ? "p" : "h2"}
           className={classes.subtitle}
         >
           {job}
@@ -50,6 +55,7 @@ AvatarEnhance.propTypes = {
   job: PropTypes.string,
   bottomComponent: PropTypes.element,
   small: PropTypes.bool,
+  asParagraph: PropTypes.bool,
 };
 
 export default AvatarEnhance;
