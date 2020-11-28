@@ -22,7 +22,7 @@ function ButtonNetworkProfils() {
         size="large"
         href={PERSONAL_DETAILS.GitHub}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
       >
         GitHub
       </Button>
@@ -32,7 +32,7 @@ function ButtonNetworkProfils() {
         size="large"
         href={PERSONAL_DETAILS.LinkedIn}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener"
       >
         Linkedin
       </Button>
