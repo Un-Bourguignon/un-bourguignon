@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { ContactDetails, AvatarEnhance } from "@un-bourguignon/components";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import Fab from "@material-ui/core/Fab";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Chip from "@material-ui/core/Chip";
@@ -26,9 +26,10 @@ const useStyles = makeStyles((theme) => ({
   section: {
     marginBottom: theme.spacing(2),
   },
-  buttonDLContact: {
-    marginTop: theme.spacing(1),
-    textTransform: "none",
+  fabDLContact: {
+    position: "fixed",
+    bottom: theme.spacing(3),
+    right: theme.spacing(3),
   },
   divider: {
     marginBottom: theme.spacing(5),
@@ -119,15 +120,15 @@ const FreelancePage = () => {
             phone={PERSONAL_DETAILS.phone}
           />
         </Paper>
-        <Button
-          startIcon={<PersonAddIcon />}
-          size="large"
-          variant="outlined"
-          className={classes.buttonDLContact}
+        <Fab
+          title="Ajouter mon contact"
+          aria-label="Ajouter mon contact"
+          color="primary"
+          className={classes.fabDLContact}
           href={PERSONAL_DETAILS.vcf}
         >
-          Télécharger mon contact
-        </Button>
+          <PersonAddIcon />
+        </Fab>
       </section>
     </Container>
   );
