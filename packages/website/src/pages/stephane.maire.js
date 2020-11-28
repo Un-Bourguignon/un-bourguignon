@@ -1,5 +1,6 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ContactDetails, AvatarEnhance } from "@un-bourguignon/components";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Fab from "@material-ui/core/Fab";
@@ -37,10 +38,15 @@ const useStyles = makeStyles((theme) => ({
   chip: {
     marginRight: theme.spacing(0.5),
   },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
 }));
 
 const FreelancePage = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <Container
@@ -124,10 +130,12 @@ const FreelancePage = () => {
           title="Ajouter mon contact"
           aria-label="Ajouter mon contact"
           color="primary"
+          variant={matches ? "extended" : "round"}
           className={classes.fabDLContact}
           href={PERSONAL_DETAILS.vcf}
         >
-          <PersonAddIcon />
+          <PersonAddIcon className={matches ? classes.extendedIcon : ""} />
+          {matches ? "Mon contact" : null}
         </Fab>
       </section>
     </Container>
