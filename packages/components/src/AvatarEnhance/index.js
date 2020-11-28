@@ -2,12 +2,11 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
 import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-function AvatarEnhance({ firstname, lastname, img, externalLinks = [] }) {
+function AvatarEnhance({ firstname, lastname, img, bottomComponent = null }) {
   const classes = useStyles();
 
   return (
@@ -31,19 +30,7 @@ function AvatarEnhance({ firstname, lastname, img, externalLinks = [] }) {
           Développeur Front-End
         </Typography>
 
-        <div>
-          {externalLinks.map(({ icon: Icon, href }, i) => (
-            <IconButton
-              key={href}
-              edge={i === 0 ? "start" : false}
-              size="small"
-              className={classes.externalLinkIcon}
-              href={href}
-            >
-              <Icon fontSize="small" />
-            </IconButton>
-          ))}
-        </div>
+        {bottomComponent}
       </div>
     </div>
   );
@@ -53,12 +40,7 @@ AvatarEnhance.propTypes = {
   img: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
-  externalLinks: PropTypes.arrayOf(
-    PropTypes.shape({
-      icon: PropTypes.elementType,
-      href: PropTypes.string,
-    })
-  ),
+  bottomComponent: PropTypes.element,
 };
 
 export default AvatarEnhance;

@@ -17,9 +17,6 @@ const styles = (theme) => ({
   subtitle: {
     fontWeight: theme.typography.fontWeightMedium,
   },
-  externalLinkIcon: {
-    marginRight: theme.spacing(1),
-  },
   name: {
     textTransform: "uppercase",
     letterSpacing: theme.typography.caption.letterSpacing,
