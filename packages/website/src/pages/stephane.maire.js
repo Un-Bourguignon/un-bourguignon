@@ -5,10 +5,11 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
-import GetAppIcon from "@material-ui/icons/GetApp";
+import Chip from "@material-ui/core/Chip";
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import ButtonNetworkProfils from "../components/ButtonsNetworkProfils";
-import { PERSONAL_DETAILS } from "../constants";
 import LogoWebTechno from "../components/LogoWebTechno";
+import { PERSONAL_DETAILS } from "../constants";
 
 const useStyles = makeStyles((theme) => ({
   FreelancePage: {
@@ -32,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     marginBottom: theme.spacing(5),
   },
+  chip: {
+    marginRight: theme.spacing(0.5),
+  },
 }));
 
 const FreelancePage = () => {
@@ -49,6 +53,22 @@ const FreelancePage = () => {
           externalLinks={[]}
           firstname={PERSONAL_DETAILS.firstname}
           lastname={PERSONAL_DETAILS.lastname}
+          bottomComponent={
+            <div>
+              <Chip
+                label="Freelance"
+                variant="outlined"
+                size="small"
+                className={classes.chip}
+              />
+              <Chip
+                label="Full Remote"
+                variant="outlined"
+                size="small"
+                className={classes.chip}
+              />
+            </div>
+          }
         />
       </header>
 
@@ -100,7 +120,7 @@ const FreelancePage = () => {
           />
         </Paper>
         <Button
-          startIcon={<GetAppIcon />}
+          startIcon={<PersonAddIcon />}
           size="large"
           variant="outlined"
           className={classes.buttonDLContact}
