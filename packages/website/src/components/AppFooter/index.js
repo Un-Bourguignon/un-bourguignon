@@ -11,10 +11,10 @@ function AppFooter() {
   return (
     <div className={classes.AppFooter}>
       <Container maxWidth="sm" className={classes.container}>
-        <div>
-          <Typography variant="subtitle2">Un Bourguignon . SASU</Typography>
-        </div>
-        <Typography variant="caption">© Un Bourguignon 2020</Typography>
+        <Typography variant="body1" className={classes.footerAppName} paragraph>
+          Un Bourguignon
+        </Typography>
+        <Typography variant="body2">Copyright © 2020 Un Bourguignon</Typography>
       </Container>
     </div>
   );
