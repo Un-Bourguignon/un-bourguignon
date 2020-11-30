@@ -2,6 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { AvatarEnhance } from "@un-bourguignon/components";
 import { PERSONAL_DETAILS } from "../constants";
@@ -18,8 +19,11 @@ const useStyles = makeStyles((theme) => ({
   content: {
     padding: `0 ${theme.spacing(2)}px`,
   },
-  headerFontSize: {
+  headerSmallFontSize: {
     fontSize: theme.typography.h3.fontSize,
+  },
+  subHeaderSmallFontSize: {
+    fontSize: theme.typography.h6.fontSize,
   },
   pages: {
     display: "flex",
@@ -31,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(3),
   },
   buttonPage: {
+    justifyContent: "flex-start",
     padding: theme.spacing(2),
     "&:hover": {
       backgroundColor: theme.palette.action.hover,
@@ -52,14 +57,23 @@ function Home() {
           content="Expertise développement web front-end et technologies React"
         />
       </Head>
-      <div className={classes.content}>
+      <Container maxWidth="sm">
         <Typography
           variant="h2"
           component="h1"
-          className={matches ? classes.headerFontSize : ""}
+          className={matches ? classes.headerSmallFontSize : ""}
           paragraph
         >
           Un Bourguignon
+        </Typography>
+        <Typography
+          variant="h4"
+          component="h2"
+          className={matches ? classes.subHeaderSmallFontSize : ""}
+          paragraph
+          color="textSecondary"
+        >
+          Expertise développement web front-end et technologies React
         </Typography>
 
         <div className={classes.pages}>
@@ -82,7 +96,7 @@ function Home() {
             </ButtonBase>
           </Link>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
