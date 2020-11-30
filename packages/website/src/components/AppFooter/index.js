@@ -14,7 +14,9 @@ function AppFooter() {
         <Typography variant="body1" className={classes.footerAppName} paragraph>
           Un Bourguignon
         </Typography>
-        <Typography variant="body2">Copyright © 2020 Un Bourguignon</Typography>
+        <Typography variant="body2" color="textSecondary">
+          Copyright © 2020 Un Bourguignon
+        </Typography>
       </Container>
     </div>
   );
