@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ContactDetails, AvatarEnhance } from "@un-bourguignon/components";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -54,6 +55,13 @@ const FreelancePage = () => {
       component="article"
       className={classes.FreelancePage}
     >
+      <Head>
+        <title>Un Bourguignon: Stéphane Maire activité de freelance</title>
+        <meta
+          name="description"
+          content="Stéphane Maire, freelance full remote développeur web front-end"
+        />
+      </Head>
       <header className={classes.header}>
         <AvatarEnhance
           img={PERSONAL_DETAILS.image}

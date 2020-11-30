@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typography from "@material-ui/core/Typography";
@@ -44,6 +45,13 @@ function Home() {
 
   return (
     <div className={classes.Home}>
+      <Head>
+        <title>Un Bourguignon: Développement Web</title>
+        <meta
+          name="description"
+          content="Expertise développement web front-end et technologies React"
+        />
+      </Head>
       <div className={classes.content}>
         <Typography
           variant="h2"
