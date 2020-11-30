@@ -21,12 +21,13 @@ const useStyles = makeStyles((theme) => ({
   header: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(2),
+    marginBottom: theme.spacing(4),
   },
   fontWeightRegular: {
     fontWeight: theme.typography.fontWeightRegular,
   },
   section: {
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(4),
   },
   fabDLContact: {
     position: "fixed",
@@ -106,6 +107,7 @@ const FreelancePage = () => {
         <LogoWebTechno />
       </section>
 
+      <div style={{ height: 56 }} />
       <Divider light className={classes.divider} />
 
       <section id="social-networks" className={classes.section}>
