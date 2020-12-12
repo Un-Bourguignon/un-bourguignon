@@ -1,35 +1,48 @@
 import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Tooltip from "@material-ui/core/Tooltip";
+import ReactIcon from "../../../public/react.svg";
+import NextJSIcon from "../../../public/nextjs.svg";
+import AWSIcon from "../../../public/aws.svg";
+import ChromaticIcon from "../../../public/chromatic-icon.svg";
+import JestIcon from "../../../public/jest.svg";
+import MaterialUIIcon from "../../../public/material-ui.svg";
+import MDXIcon from "../../../public/mdx.svg";
+import ReduxSagaIcon from "../../../public/redux-saga.svg";
+import ReduxIcon from "../../../public/redux.svg";
+import StorybookIcon from "../../../public/storybook-icon.svg";
 import styles from "./styles";
 
-const BASE_URL_LOGO = "https://cdn.svgporn.com/logos";
 const useStyles = makeStyles(styles);
 
 const logos = [
-  { title: "React", url: "react" },
-  { title: "NexJS", url: "nextjs" },
-  { title: "Material UI", url: "material-ui" },
-  { title: "Redux", url: "redux" },
-  { title: "Redux Saga", url: "redux-saga" },
-  { title: "Storybook", url: "storybook-icon" },
-  { title: "Chromatic", url: "chromatic-icon" },
-  { title: "Jest", url: "jest" },
-  { title: "AWS", url: "aws" },
-  { title: "MDX", url: "mdx" },
+  { title: "React", key: "react", icon: ReactIcon },
+  { title: "NexJS", key: "nextjs", icon: NextJSIcon, filter: "contrast(0.2)" },
+  { title: "Material UI", key: "material-ui", icon: MaterialUIIcon },
+  { title: "Redux", key: "redux", icon: ReduxIcon },
+  { title: "Redux Saga", key: "redux-saga", icon: ReduxSagaIcon },
+  { title: "Storybook", key: "storybook-icon", icon: StorybookIcon },
+  { title: "Chromatic", key: "chromatic-icon", icon: ChromaticIcon },
+  { title: "Jest", key: "jest", icon: JestIcon },
+  { title: "AWS", key: "aws", icon: AWSIcon, filter: "contrast(0.4)" },
+  { title: "MDX", key: "mdx", icon: MDXIcon },
 ];
 
 function LogoWebTechno() {
   const classes = useStyles();
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
 
   return (
-    <div>
-      {logos.map(({ title, url }) => (
-        <img
-          key={url}
-          src={`${BASE_URL_LOGO}/${url}.svg`}
-          alt={title}
-          title={title}
-          className={classes.logo}
-        />
+    <div style={{ filter: "grayscale(60%)" }}>
+      {logos.map(({ title, icon: Icon, key, filter }) => (
+        <Tooltip title={title} aria-label={title} key={key}>
+          <span>
+            <Icon
+              className={classes.svg}
+              style={prefersDarkMode ? { filter } : {}}
+            />
+          </span>
+        </Tooltip>
       ))}
     </div>
   );
