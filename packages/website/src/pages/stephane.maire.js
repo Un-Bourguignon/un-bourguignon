@@ -107,7 +107,6 @@ const FreelancePage = () => {
         <LogoWebTechno />
       </section>
 
-      <div style={{ height: 56 }} />
       <Divider light className={classes.divider} />
 
       <section id="social-networks" className={classes.section}>
