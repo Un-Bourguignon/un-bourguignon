@@ -1,5 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
 import ReactIcon from "../../../public/react.svg";
 import NextJSIcon from "../../../public/nextjs.svg";
@@ -30,7 +29,8 @@ const logos = [
 
 function LogoWebTechno() {
   const classes = useStyles();
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const theme = useTheme();
+  const prefersDarkMode = theme.palette.type;
 
   return (
     <div style={{ filter: "grayscale(60%)" }}>
