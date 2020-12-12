@@ -3,10 +3,9 @@ import PropTypes from "prop-types";
 import App from "next/app";
 import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { MuiThemeProvider } from "@material-ui/core/styles";
 import { AppLayout } from "@un-bourguignon/components";
+import { ThemeProvider } from "../components/UserContext";
 import AppFooter from "../components/AppFooter";
-import theme from "../theme";
 import "../styles.css";
 
 class MyApp extends App {
@@ -17,15 +16,15 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>Un Bourguignon</title>s
+          <title>Un Bourguignon</title>
         </Head>
 
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider>
           <CssBaseline />
           <AppLayout footer={!isFreelancePage ? <AppFooter /> : null}>
             <Component {...pageProps} />
           </AppLayout>
-        </MuiThemeProvider>
+        </ThemeProvider>
       </>
     );
   }
