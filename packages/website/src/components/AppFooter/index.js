@@ -11,7 +11,12 @@ function AppFooter() {
   return (
     <div className={classes.AppFooter}>
       <Container maxWidth="sm" className={classes.container}>
-        <Typography variant="body1" className={classes.footerAppName} paragraph>
+        <Typography
+          variant="body1"
+          paragraph
+          className={classes.footerAppName}
+          color="textPrimary"
+        >
           Un Bourguignon
         </Typography>
         <Typography variant="body2" color="textSecondary">
