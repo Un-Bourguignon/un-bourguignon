@@ -12,7 +12,6 @@ import "../styles.css";
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
-    const isFreelancePage = this.props.router.pathname === "/stephane.maire";
 
     return (
       <>
@@ -22,7 +21,7 @@ class MyApp extends App {
 
         <ThemeProvider>
           <CssBaseline />
-          <AppLayout footer={!isFreelancePage ? <AppFooter /> : null}>
+          <AppLayout footer={<AppFooter />}>
             <HeaderSource>
               <AppBar />
             </HeaderSource>
