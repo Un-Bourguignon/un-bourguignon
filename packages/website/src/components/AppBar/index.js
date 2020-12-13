@@ -20,7 +20,12 @@ function AppBar() {
   }
 
   return (
-    <AppBarMui position="static" color="transparent" elevation={0}>
+    <AppBarMui
+      position="static"
+      color="transparent"
+      elevation={0}
+      component="div"
+    >
       <Toolbar>
         <div className={classes.flexGrow} />
         <IconButton onClick={handleClickChangePaletteMode}>
