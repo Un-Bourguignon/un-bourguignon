@@ -24,6 +24,7 @@ function AppLayout({ children, footer }) {
 
 AppLayout.propTypes = {
   footer: PropTypes.element,
+  children: PropTypes.node,
 };
 
 export default AppLayout;
