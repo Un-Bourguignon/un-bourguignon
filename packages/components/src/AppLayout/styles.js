@@ -7,7 +7,7 @@ const styles = () => ({
 
   appLayoutMain: {
     flexGrow: 1,
-    height: 1,
+    height: "100%",
   },
 });
 
