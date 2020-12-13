@@ -1,7 +1,6 @@
 const styles = (theme) => ({
   AppFooter: {
-    backgroundColor: theme.palette.grey[100],
-    borderTop: `1px solid ${theme.palette.grey[300]}`,
+    borderTop: `1px solid ${theme.palette.divider}`,
   },
   container: {
     padding: theme.spacing(3),
