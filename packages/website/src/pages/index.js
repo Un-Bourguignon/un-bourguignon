@@ -77,12 +77,6 @@ function Home() {
         </Typography>
 
         <div className={classes.pages}>
-          <ButtonBase className={classes.buttonPage}>
-            <Typography variant="h6" component="p" color="textSecondary">
-              🛠️ Edition logiciel
-            </Typography>
-          </ButtonBase>
-
           <Link href="/stephane.maire" passHref>
             <ButtonBase className={classes.buttonPage} component="a">
               <AvatarEnhance
