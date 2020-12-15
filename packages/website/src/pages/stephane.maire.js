@@ -57,10 +57,12 @@ const FreelancePage = () => {
       className={classes.FreelancePage}
     >
       <Head>
-        <title>Un Bourguignon: Stéphane Maire activité de freelance</title>
+        <title>
+          Un Bourguignon: activité de freelance, présentation de Stéphane Maire
+        </title>
         <meta
           name="description"
-          content="Stéphane Maire, freelance full remote développeur web front-end"
+          content="Un Bourguignon: activité de freelance, Freelance: Stéphane Maire, Compétences: développeur web front-end et technologies React, Full remote: oui"
         />
       </Head>
       <header className={classes.header}>

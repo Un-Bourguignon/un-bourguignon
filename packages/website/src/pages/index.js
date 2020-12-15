@@ -51,10 +51,10 @@ function Home() {
   return (
     <div className={classes.Home}>
       <Head>
-        <title>Un Bourguignon: Développement Web</title>
+        <title>Un Bourguignon: Expertise développement web</title>
         <meta
           name="description"
-          content="Expertise développement web front-end et technologies React"
+          content="La société Un Bourguignon fournit une expertise de développement web front-end et technologies React"
         />
       </Head>
       <Container maxWidth="sm">
