@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Image from "next/image";
 import { makeStyles } from "@material-ui/core/styles";
 import { AVATAR_DIMENSION } from "@un-bourguignon/components";
@@ -6,7 +7,7 @@ import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-function AvatarPhoto({ small }) {
+function AvatarPhoto({ small = false }) {
   const classes = useStyles();
 
   return (
@@ -20,5 +21,9 @@ function AvatarPhoto({ small }) {
     />
   );
 }
+
+AvatarPhoto.propTypes = {
+  small: PropTypes.bool,
+};
 
 export default AvatarPhoto;
