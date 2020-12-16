@@ -1,29 +1,26 @@
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
 import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
 function AvatarEnhance({
-  img,
   firstname,
   lastname,
   job = "",
   bottomComponent = null,
   small = false,
   asParagraph = false,
+  children,
 }) {
   const classes = useStyles({ small });
 
   return (
     <div className={classes.AvatarEnhance}>
-      <Avatar
-        alt={`${firstname} ${lastname}`}
-        src={img}
-        className={classes.avatar}
-      />
+      <div className={classes.avatarContainer}>
+        <div className={classes.avatar}>{children}</div>
+      </div>
       <div className={classes.text}>
         <Typography
           variant="h6"
@@ -49,7 +46,7 @@ function AvatarEnhance({
 }
 
 AvatarEnhance.propTypes = {
-  img: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
   job: PropTypes.string,
@@ -59,3 +56,4 @@ AvatarEnhance.propTypes = {
 };
 
 export default AvatarEnhance;
+export { AVATAR_DIMENSION } from "./styles";

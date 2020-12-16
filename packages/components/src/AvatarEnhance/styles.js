@@ -1,12 +1,22 @@
+export const AVATAR_DIMENSION = {
+  small: 56,
+  default: 80,
+};
+
 const styles = (theme) => ({
   AvatarEnhance: {
     display: "flex",
     alignItems: "stretch",
   },
+  avatarContainer: {
+    display: "flex",
+    alignItems: "center",
+  },
   avatar: {
-    width: ({ small }) => theme.spacing(small ? 7 : 10),
-    height: ({ small }) => theme.spacing(small ? 7 : 10),
-    border: `1px solid ${theme.palette.divider}`,
+    width: ({ small }) =>
+      small ? AVATAR_DIMENSION.small : AVATAR_DIMENSION.default,
+    height: ({ small }) =>
+      small ? AVATAR_DIMENSION.small : AVATAR_DIMENSION.default,
   },
   text: {
     display: "flex",
@@ -17,7 +27,9 @@ const styles = (theme) => ({
   subtitle: {
     fontWeight: theme.typography.fontWeightMedium,
     fontSize: ({ small }) =>
-        small ? theme.typography.body1.fontSize : theme.typography.subtitle1.fontSize,
+      small
+        ? theme.typography.body1.fontSize
+        : theme.typography.subtitle1.fontSize,
   },
   name: {
     textTransform: "uppercase",
