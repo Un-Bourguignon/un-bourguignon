@@ -2,8 +2,9 @@ import React from "react";
 import IconButton from "@material-ui/core/IconButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import Avatar from "@material-ui/core/Avatar";
 import { MOCK_USER } from "../constants";
-import AvatarEnhance from "./index";
+import AvatarEnhance, { AVATAR_DIMENSION } from "./index";
 
 export default {
   title: "components/AvatarEnhance",
@@ -36,7 +37,19 @@ const socialNetworkLinks = (
   </div>
 );
 
-const Template = (props) => <AvatarEnhance img={MOCK_USER.image} {...props} />;
+const Template = (props) => (
+  <AvatarEnhance {...props}>
+    <Avatar
+      alt={`${props.firstname} ${props.lastname}`}
+      src={MOCK_USER.image}
+      style={{
+        width: props.small ? AVATAR_DIMENSION.small : AVATAR_DIMENSION.default,
+        height: props.small ? AVATAR_DIMENSION.small : AVATAR_DIMENSION.default,
+        border: `1px solid grey`,
+      }}
+    />
+  </AvatarEnhance>
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -56,7 +69,7 @@ WithoutExternalLinks.args = {
 export const Small = Template.bind({});
 Small.args = {
   firstname: "Freelance",
-  lastname: '',
+  lastname: "",
   job: MOCK_USER.job,
   small: true,
 };
