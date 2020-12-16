@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ContactDetails, AvatarEnhance } from "@un-bourguignon/components";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -13,6 +12,7 @@ import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import ButtonNetworkProfils from "../components/ButtonsNetworkProfils";
 import LogoWebTechno from "../components/LogoWebTechno";
 import { PERSONAL_DETAILS } from "../constants";
+import AvatarPhoto from "../components/AvatarPhoto";
 
 const useStyles = makeStyles((theme) => ({
   FreelancePage: {
@@ -43,10 +43,6 @@ const useStyles = makeStyles((theme) => ({
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
-  },
-  avatar: {
-    border: `1px solid ${theme.palette.divider} !important`,
-    borderRadius: "50%",
   },
 }));
 
@@ -93,14 +89,7 @@ const FreelancePage = () => {
             </div>
           }
         >
-          <Image
-            src={PERSONAL_DETAILS.image}
-            alt={`${PERSONAL_DETAILS.firstname} ${PERSONAL_DETAILS.lastname}`}
-            width={theme.spacing(10)}
-            height={theme.spacing(10)}
-            layout="fixed"
-            className={classes.avatar}
-          />
+          <AvatarPhoto />
         </AvatarEnhance>
       </header>
 

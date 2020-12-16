@@ -4,9 +4,10 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import { AvatarEnhance } from "@un-bourguignon/components";
-import { PERSONAL_DETAILS } from "../constants";
 import ButtonBase from "@material-ui/core/ButtonBase";
+import { AvatarEnhance } from "@un-bourguignon/components";
+import AvatarPhoto from "../components/AvatarPhoto";
+import { PERSONAL_DETAILS } from "../constants";
 
 const useStyles = makeStyles((theme) => ({
   Home: {
@@ -86,7 +87,9 @@ function Home() {
                 job={PERSONAL_DETAILS.job}
                 small
                 asParagraph
-              />
+              >
+                <AvatarPhoto small />
+              </AvatarEnhance>
             </ButtonBase>
           </Link>
         </div>
