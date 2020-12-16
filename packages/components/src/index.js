@@ -10,3 +10,4 @@ export { default as AppLayout } from "./AppLayout";
 export { default as ContactDetails } from "./ContactDetails";
 
 export { default as AvatarEnhance } from "./AvatarEnhance";
+export * from "./AvatarEnhance";
