@@ -21,10 +21,7 @@ class MyApp extends App {
 
         <ThemeProvider>
           <CssBaseline />
-          <AppLayout footer={<AppFooter />}>
-            <HeaderSource>
-              <AppBar />
-            </HeaderSource>
+          <AppLayout header={<AppBar />} footer={<AppFooter />}>
             <Component {...pageProps} />
           </AppLayout>
         </ThemeProvider>
