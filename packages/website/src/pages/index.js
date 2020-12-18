@@ -11,8 +11,6 @@ import { PERSONAL_DETAILS } from "../constants";
 
 const useStyles = makeStyles((theme) => ({
   Home: {
-    height: "100%",
-    width: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
