@@ -1,23 +1,19 @@
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { HeaderTarget } from "./HeaderTeleporter";
 import styles from "./styles";
 
 const useStyles = makeStyles(styles);
 
-function AppLayout({ children, footer }) {
+function AppLayout({ children, header, footer }) {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.appLayout}>
-        <header>
-          <HeaderTarget />
-        </header>
-
-        <main className={classes.appLayoutMain}>{children}</main>
-      </div>
-      {footer && <footer>{footer}</footer>}
+      <main className={classes.appLayout}>
+        {header && <header>{header}</header>}
+        <div className={classes.appLayoutMain}>{children}</div>
+        {footer && <footer>{footer}</footer>}
+      </main>
     </>
   );
 }
@@ -28,4 +24,3 @@ AppLayout.propTypes = {
 };
 
 export default AppLayout;
-export * from "./HeaderTeleporter";
