@@ -20,6 +20,7 @@ function AppLayout({ children, header, footer }) {
 
 AppLayout.propTypes = {
   footer: PropTypes.element,
+  header: PropTypes.element,
   children: PropTypes.node,
 };
 
