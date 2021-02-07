@@ -7,6 +7,7 @@ const styles = (theme) => ({
   AvatarEnhance: {
     display: "flex",
     alignItems: "stretch",
+    flexDirection: ({ vertical }) => (vertical ? "column" : "row"),
   },
   avatarContainer: {
     display: "flex",
@@ -22,7 +23,8 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    marginLeft: theme.spacing(2),
+    marginLeft: ({ vertical }) => (vertical ? 0 : theme.spacing(2)),
+    marginTop: ({ vertical }) => (vertical ? theme.spacing(2) : 0),
   },
   subtitle: {
     fontWeight: theme.typography.fontWeightMedium,

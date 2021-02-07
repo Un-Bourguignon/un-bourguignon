@@ -12,9 +12,10 @@ function AvatarEnhance({
   bottomComponent = null,
   small = false,
   asParagraph = false,
+  vertical = false,
   children,
 }) {
-  const classes = useStyles({ small });
+  const classes = useStyles({ small, vertical });
 
   return (
     <div className={classes.AvatarEnhance}>
@@ -53,6 +54,7 @@ AvatarEnhance.propTypes = {
   bottomComponent: PropTypes.element,
   small: PropTypes.bool,
   asParagraph: PropTypes.bool,
+  vertical: PropTypes.bool,
 };
 
 export default AvatarEnhance;
