@@ -59,8 +59,8 @@ Default.args = {
   bottomComponent: socialNetworkLinks,
 };
 
-export const WithoutExternalLinks = Template.bind({});
-WithoutExternalLinks.args = {
+export const WithoutThirdLine = Template.bind({});
+WithoutThirdLine.args = {
   firstname: MOCK_USER.firstname,
   lastname: MOCK_USER.lastname,
   job: MOCK_USER.job,
@@ -82,7 +82,6 @@ Vertical.args = {
   small: true,
   vertical: true,
 };
-
 Vertical.decorators = [
   (Story) => {
 
