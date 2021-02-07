@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -73,3 +73,38 @@ Small.args = {
   job: MOCK_USER.job,
   small: true,
 };
+
+export const Vertical = Template.bind({});
+Vertical.args = {
+  firstname: "Freelance",
+  lastname: "",
+  job: MOCK_USER.job,
+  small: true,
+  vertical: true,
+};
+
+Vertical.decorators = [
+  (Story) => {
+
+    const [small, setSmall] = useState(false);
+    const [vertical, setVertical] = useState(false);
+
+    function handleToggleVertical() {
+      setVertical(!vertical);
+    }
+
+    function handleToggleSmall() {
+      setSmall(!small);
+    }
+
+    return (
+      <div>
+        <div style={{ padding: 16, paddingLeft: 0 }}>
+          <button onClick={handleToggleVertical}>Toggle direction</button>
+          <button onClick={handleToggleSmall}>Toggle small</button>
+        </div>
+        <Story args={{ ...Vertical.args, vertical, small }} />
+      </div>
+    );
+  },
+];
