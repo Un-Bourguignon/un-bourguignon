@@ -1,6 +1,6 @@
 import React from "react";
 
-import AppLayout, { HeaderSource } from "./index";
+import AppLayout  from "./index";
 
 export default {
   title: "components/AppLayout",
@@ -9,9 +9,6 @@ export default {
     (Story) => {
       return (
         <div style={{ height: "100%" }}>
-          <HeaderSource>
-            <h1>Header</h1>
-          </HeaderSource>
           <Story />
         </div>
       );
@@ -33,13 +30,13 @@ const SmallHeightContent = (
 
 const BigHeightContent = (
   <div style={{ backgroundColor: "#2196f3", height: 1000, color: "white" }}>
-    Content with height 100px
+    Content with height 1000px
   </div>
 );
 
 const Footer = (
   <div style={{ height: 200, backgroundColor: "#f50057", color: "white" }}>
-    Footer
+    Footer: height 200px
   </div>
 );
 
