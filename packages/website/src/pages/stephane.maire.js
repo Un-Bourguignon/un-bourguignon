@@ -50,6 +50,7 @@ const FreelancePage = () => {
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matchesDownXS = useMediaQuery("(max-width:305px)");
 
   return (
     <Container
@@ -72,6 +73,7 @@ const FreelancePage = () => {
           firstname={PERSONAL_DETAILS.firstname}
           lastname={PERSONAL_DETAILS.lastname}
           job={PERSONAL_DETAILS.job}
+          vertical={matchesDownXS}
           bottomComponent={
             <div>
               <Chip
