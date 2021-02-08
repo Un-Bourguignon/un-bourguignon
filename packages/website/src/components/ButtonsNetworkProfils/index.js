@@ -1,10 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import Malt from "../../../public/malt.svg";
 import {
   PERSONAL_DETAILS,
-  GITHUB_COLOR,
   LINKEDIN_COLOR,
 } from "../../constants";
 import styles from "./styles";
@@ -17,16 +16,6 @@ function ButtonNetworkProfils() {
   return (
     <div>
       <Button
-        startIcon={<GitHubIcon style={{ color: GITHUB_COLOR }} />}
-        className={classes.button}
-        size="large"
-        href={PERSONAL_DETAILS.GitHub}
-        target="_blank"
-        rel="noopener"
-      >
-        GitHub
-      </Button>
-      <Button
         startIcon={<LinkedInIcon style={{ color: LINKEDIN_COLOR }} />}
         className={classes.button}
         size="large"
@@ -35,6 +24,16 @@ function ButtonNetworkProfils() {
         rel="noopener"
       >
         Linkedin
+      </Button>
+      <Button
+        startIcon={<Malt />}
+        className={classes.button}
+        size="large"
+        href={PERSONAL_DETAILS.Malt}
+        target="_blank"
+        rel="noopener"
+      >
+        Malt
       </Button>
     </div>
   );
