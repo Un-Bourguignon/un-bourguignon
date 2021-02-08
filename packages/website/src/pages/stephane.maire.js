@@ -129,8 +129,9 @@ const FreelancePage = () => {
 
       <section id="contact-informations" className={classes.section}>
         <Typography
-          variant="h6"
+          variant="h5"
           component="h3"
+          paragraph
           className={classes.fontWeightRegular}
         >
           Contactez moi
