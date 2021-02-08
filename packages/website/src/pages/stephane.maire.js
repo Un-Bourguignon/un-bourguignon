@@ -2,16 +2,17 @@ import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ContactDetails, AvatarEnhance } from "@un-bourguignon/components";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Fab from "@material-ui/core/Fab";
 import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
 import Chip from "@material-ui/core/Chip";
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import ButtonNetworkProfils from "../components/ButtonsNetworkProfils";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import LogoWebTechno from "../components/LogoWebTechno";
-import { PERSONAL_DETAILS } from "../constants";
+import { GITHUB_COLOR, PERSONAL_DETAILS } from "../constants";
 import AvatarPhoto from "../components/AvatarPhoto";
 
 const useStyles = makeStyles((theme) => ({
@@ -105,6 +106,17 @@ const FreelancePage = () => {
           les technologies qui gravitent autour.
           <br />
         </Typography>
+        <Button
+          style={{ marginTop: theme.spacing(2) }}
+          variant='outlined'
+          startIcon={<GitHubIcon style={{ color: GITHUB_COLOR }} />}
+          size="large"
+          href={PERSONAL_DETAILS.GitHub}
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </Button>
       </section>
 
       <section id="technologies" className={classes.section}>
