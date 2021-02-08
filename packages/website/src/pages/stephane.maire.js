@@ -35,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
     bottom: theme.spacing(3),
     right: theme.spacing(3),
   },
-  divider: {
-    marginBottom: theme.spacing(5),
-  },
   chip: {
     marginRight: theme.spacing(0.5),
   },
@@ -114,19 +111,6 @@ const FreelancePage = () => {
         <LogoWebTechno />
       </section>
 
-      <Divider light className={classes.divider} />
-
-      <section id="social-networks" className={classes.section}>
-        <Typography
-          variant="h6"
-          component="h3"
-          className={classes.fontWeightRegular}
-        >
-          Sur les réseaux
-        </Typography>
-        <ButtonNetworkProfils />
-      </section>
-
       <section id="contact-informations" className={classes.section}>
         <Typography
           variant="h5"
@@ -142,6 +126,9 @@ const FreelancePage = () => {
             location={PERSONAL_DETAILS.location}
             phone={PERSONAL_DETAILS.phone}
           />
+          <div style={{ padding: theme.spacing(1) }}>
+            <ButtonNetworkProfils />
+          </div>
         </Paper>
         <Fab
           title="Ajouter mon contact"
